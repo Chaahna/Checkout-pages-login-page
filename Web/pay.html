@@ -1,0 +1,180 @@
+<html align="center">
+<head>
+	<!--<link rel="stylesheet" type="text/css" href="style.css">-->
+	<script src="jquery-3.3.1.js"></script>
+	<script>
+	$(document).ready(function(){
+		$("p").click(function(){
+			$(this).hide();
+		});
+	}); 
+	</script>
+
+	
+		<script src="https://kit.fontawesome.com/a076d05399.js">
+		</script>
+		
+	<script type="text/javascript">
+	function check1()
+	{
+	document.getElementById("wallet").style.display="inline";
+	}
+	
+	function check2()
+	{
+	document.getElementById("card").style.display="block";
+	}
+	
+	function check3()
+	{
+	document.getElementById("details").style.display="block";
+	}
+	
+	function validate()
+	{
+		if(document.myform.cardholder.value=="")
+		{
+		alert("Please enter the valid name of the cardholder!");
+		document.myform.cardholder.focus();
+		return false;
+		}
+		
+		if(document.myform.cardnumber.value==""||
+		isNaN(document.myform.cardnumber.value)||
+		document.myform.cardnumber.value.length!=16)
+		{
+		alert("PLease enter the valid cardnumber!");
+		document.myform.cardnumber.focus();
+		return false;
+		}
+		
+		if(document.myform.verification.value==""||
+		isNaN(document.myform.verification.value)||
+		document.myform.cardnumber.value.length!=3)
+		{
+		alert("PLease enter the valid CVC/CVV!");
+		document.myform.cardnumber.focus();
+		return false;
+		}
+		
+		if(document.myform.date.value=-1="")
+		{
+		alert("name");
+		document.myform.date.focus();
+		return false;
+		}
+		return(true);
+	}
+	</script>
+
+</head>
+<body>
+<header>
+<img src="OnFire.jpg" class="left" />
+<header/>
+
+<div class="checkout-panel">
+  	
+ 
+	  <div class="progress-bar">
+		  <div class="step active"></div>
+		  <div class="step"></div>
+		  <div class="step"></div>
+   	 </div>
+
+		
+	 <div class="panel-body">
+		<h1 class="title">Payment</h1>
+ 	 
+		<div class="payment-method" >
+			 <label for="Wallet" class="method" background-color="rgb(249, 249, 249)">
+				<div class="radio-input">
+				  <input type="radio" name="payment">
+					Pay with wallet 
+				</div>
+				
+					
+				<div id="wallet">
+					 <input type="radio" name="wallet">
+					 <img src="paytm.png" height="50" width="50"/><br><br>
+					 <input type="radio" name="wallet">
+					 <img src="paypal.png" height="50" width="50"/>
+				</div>
+			</label>
+
+			 <label for="Card" class="method">
+				 <div class="radio-input">
+				  <input type="radio" name="payment">
+				  Pay with credit card
+				</div>
+				<br>
+				<div id="card">
+					<input type="radio" name="card">
+					<img src="amex.png" height="50" width="50"/><br><br>
+					<input type="radio" name="card">
+					<img src="visa.png" height="50" width="50"/><br><br> 
+					<input type="radio" name="card">
+					<img src="mastercard.png" height="50" width="50"/>
+				</div>
+						<br>
+				<form name="myform" onsubmit="return(validate())";>
+				 <div class="input-fields center" id="details" >
+					 <div class="column-1">
+							<div>
+								<label for="cardholder">Cardholder's Name <i class="fas fa-user"></i></label>
+								<input type="text" name="cardholder"/>
+						   </div>
+								<br>
+
+							<div>
+								<label for="cardnumber">Card Number  <i class="fas fa-credit-card"></i></label>
+								<input type="password" name="cardnumber" maxlength="16"/>
+							</div>
+
+						<div class="small-inputs">
+							<div>
+								<label for="verification">CVV / CVC * <i class="fas fa-lock"></i></label>
+								<input type="password" name="verification"/>
+									<span class="info">* CVV or CVC is the card security code, unique three digits number on the back of your card separate from its number.</span>
+							</div>
+								<br>
+							<div>
+									<label for="date">Valid thru <i class="fas fa-calendar"></i></label>
+									<input type="date" name="date" placeholder="MM / YY"  maxlength="3"/>
+							</div>
+						</div>	   
+					</div> 
+				</div>	
+				</form>
+			</label>
+
+			 <label for="Netbanking" class="method">
+				<img src=""/>
+				<div class="radio-input">
+					<input type="radio" name="payment">
+						 Pay with Netbanking 
+				</div>
+			</label>
+			
+			 <label for="CashOndelivery" class="method">
+				<img src=""/>
+				<div class="radio-input">
+					 <input type="radio" name="payment">
+					   Pay Cash On Delivery.
+				</div>
+			</label>
+
+
+		</div>
+     
+		  <div class="panel-footer">
+			<button class="btn back-btn">Back</button>
+			<input type="submit" class="btn next-btn" value="Next">
+		  </div>
+	</div>
+
+
+
+
+</body>
+</html>

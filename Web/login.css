@@ -1,0 +1,103 @@
+/* Bordered form */
+form {
+  border: 3px solid #f1f1f1;
+  margin-top:100px;
+	 text-align: center;
+	 font-size: 40px;
+	 height: 40%;
+  width: 50%;
+  position: middle;
+  left: 50%;
+   margin: 5% auto 15% auto;
+  background: #000;
+  background-color: #fefefe;
+  
+  
+}
+body{
+	background-image: url("burger.jpg");
+	background-position: cover;
+	
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: DodgerBlue;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+  text-align: left;
+  margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+  width: 10%;
+  
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn {
+    width: 100%;
+  }
+}
+
+.btn {
+  font-size: 16px;
+  width: 163px;
+  height: 48px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 23px;
+}
+ 
+.login-btn {
+  color: #f62f5e;
+  background: #252525;
+}
+ 
+.can-btn {
+  color: #fff;
+  background: #252525;
+}
+ 
+.btn:focus {
+  outline: none;
+}
+ 
+.btn:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+
+ 

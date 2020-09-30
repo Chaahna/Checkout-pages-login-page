@@ -1,0 +1,116 @@
+<!-- page to take delivery address of the user-->
+<html align="center" class="hero-image"> <!-- for the bg image-->
+<head>
+<link rel="stylesheet" type="text/css" href="address.css"> <!-- linking to the file tht contains css formating-->
+
+	<script src="jquery-3.3.1.js">
+	</script>
+	
+<title>
+DELIVERY ADDRESS
+</title>
+	<script src="https://kit.fontawesome.com/a076d05399.js"> <!-- for icons on the page-->
+	</script>
+		
+	<script type="text/javascript">
+	function check1()
+	{
+	document.getElementById("wallet").style.display="block";
+	}
+	
+	function check2()
+	{
+	document.getElementById("card").style.display="block";
+	}
+	
+	function check3()
+	{
+	document.getElementById("details").style.display="block";
+	}
+	
+	function validate() <!-- valiations for the data taken-->
+	{
+		if(document.myform.address.value=="")
+		{
+		alert("Please enter !");
+		document.myform.address.focus();
+		return false;
+		}
+		
+		if(document.myform.city.value=="")
+		{
+		alert("Please enter a valid city name!");
+		document.myform.city.focus();
+		return false;
+		}
+		
+		if(document.myform.state.value=="")
+		{
+		alert("Please enter a valid state name!");
+		document.myform.state.focus();
+		return false;
+		}
+		
+		if(document.myform.zip.value==""||
+		isNaN(document.myform.zip.value)||
+		document.myform.zip.value.length!=5)
+		{
+		alert("PLease enter the valid Zip code.");
+		document.myform.cardnumber.focus();
+		return false;
+		}
+	return(true);
+	}
+	</script>
+</head>
+
+<body>
+	<header>
+		<img src="OnFire.jpg" class="left" /> <!-- logo of the website-->
+	</header>
+
+<div class="address-panel">
+	<div class="progress-bar"><!-- unfinished/empty progress bar-->
+		  <div class="step "></div>
+		  <div class="step"></div>
+		  <div class="step"></div>
+   	</div>
+
+	<form name="myform" onchange="return(validate());"> <!-- applying valiations-->
+
+		<h3>Delivery Address</h3>
+		<br>
+		<div class="column-1" align="center">
+            <label for="address">
+				<i class="fas fa-map-pin"></i>
+				Address
+			</label>
+            <input type="text" id="adr" name="address" class="input-fields">
+			<br>
+			
+            <label for="city">
+			<i class="fas fa-city"></i>
+				City
+			</label>
+            <input type="text" id="city" name="city" class="input-fields">
+			<br>
+			
+            <label for="state">State</label>
+            <input type="text" id="state" name="state" placeholder="Maharashtra" class="input-fields">
+			<br>
+			
+            <label for="zip">Zip</label>
+            <input type="text" id="zip" name="zip" placeholder="10001">
+        </div>
+</form>
+		
+
+	<div class="panel-footer">
+		<a  href="html.htm">
+			<input type="submit" class="btn next-btn" value="Next"/>
+		</a>
+	</div> 
+
+</div>
+</body>
+</html>
